@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Platform : MonoBehaviour
+{
+    // Start is called before the first frame update
+    Vector3 mousePos;
+    private bool automatic = false;
+    [SerializeField] private GameObject Ball;
+    [SerializeField] private Slider Slider;
+    void Start()
+    {
+        
+    }
+    void SwitchModes()
+    {
+        automatic = !automatic;
+    }
+
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!automatic)
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = new Vector3(Slider.value, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            transform.position = new Vector3(Ball.transform.position.x, transform.position.y, transform.position.z);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SwitchModes();
+        }
+        
+    }
+}
