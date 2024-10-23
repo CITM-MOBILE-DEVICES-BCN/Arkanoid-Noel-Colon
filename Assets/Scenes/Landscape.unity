@@ -697,9 +697,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 643412938}
+  - component: {fileID: 643412940}
   - component: {fileID: 643412937}
+  - component: {fileID: 643412939}
   m_Layer: 0
-  m_Name: Brick Spawner
+  m_Name: Brick Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -718,6 +720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brick: {fileID: 3385547376003943298, guid: a2512a3d47e7fbb47bf9c523676894ba, type: 3}
+  storer: {fileID: 643412939}
+  bricks: []
 --- !u!4 &643412938
 Transform:
   m_ObjectHideFlags: 0
@@ -733,6 +737,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &643412939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643412936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402c67a16ef951142a5b3649808bff53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 643412937}
+  brickTemplate: {fileID: 8458317557739524686, guid: a2512a3d47e7fbb47bf9c523676894ba, type: 3}
+  bricks: []
+--- !u!114 &643412940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643412936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b07c5b0c1bfb1478b9c65e3a7b6277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 643412937}
+  storer: {fileID: 643412939}
 --- !u!1 &675489989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1359,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2512a3d47e7fbb47bf9c523676894ba, type: 3}
+--- !u!1 &1799037605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1799037606}
+  m_Layer: 0
+  m_Name: Powerup Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1799037606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799037605}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.492128, y: 0.6666879, z: -0.05418225}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815730320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,3 +1787,4 @@ SceneRoots:
   - {fileID: 237396034}
   - {fileID: 2105803914}
   - {fileID: 853378993}
+  - {fileID: 1799037606}

@@ -32,7 +32,11 @@ public class Platform : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3(Ball.transform.position.x, transform.position.y, transform.position.z);
+            if(Ball.transform.position.x <= 7.31 && Ball.transform.position.x >= -7.31)
+            {
+                transform.position = new Vector3(Ball.transform.position.x, transform.position.y, transform.position.z);
+                Slider.value = transform.position.x;
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
