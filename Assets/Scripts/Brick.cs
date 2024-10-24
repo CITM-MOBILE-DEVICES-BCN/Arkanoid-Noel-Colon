@@ -11,6 +11,7 @@ public class Brick : MonoBehaviour
     private Color blue = Color.blue;
     private Color yellow = Color.yellow;
     private Color black = Color.black;
+    [SerializeField] private PowerupManager powerupManager;
 
     void Start()
     {
@@ -54,6 +55,11 @@ public class Brick : MonoBehaviour
         hp--;
         if (hp <= 0)
         {
+            int number = (int)Random.Range(0f, 10f) + 1;
+            if (number == 10)
+            {
+                powerupManager.SpawnPowerup(gameObject);
+            }
             Destroy(gameObject);
         }
         SetColor();

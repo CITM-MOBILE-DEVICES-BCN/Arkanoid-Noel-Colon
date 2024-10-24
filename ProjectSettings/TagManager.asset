@@ -8,6 +8,7 @@ TagManager:
   - Ball
   - Platform
   - Death
+  - Powerup
   layers:
   - Default
   - TransparentFX

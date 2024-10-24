@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
+  powerupManager: {fileID: 4574994269464223437, guid: 699a2c85863723840bee7fc002bf3f36, type: 3}

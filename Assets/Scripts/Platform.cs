@@ -10,6 +10,7 @@ public class Platform : MonoBehaviour
     private bool automatic = false;
     [SerializeField] private GameObject Ball;
     [SerializeField] private Slider Slider;
+    [SerializeField] private Powerup Powerup;
     void Start()
     {
         
@@ -19,6 +20,19 @@ public class Platform : MonoBehaviour
         automatic = !automatic;
     }
 
+    void BecomeChungus()
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Powerup"))
+        {
+            BecomeChungus();
+            Destroy(collision.gameObject);
+        }
+    }
 
 
 
